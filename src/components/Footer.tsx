@@ -42,7 +42,16 @@ const Footer = () => {
             <ul className="space-y-8 text-sm font-bold text-gray-600">
               <li className="flex gap-5">
                 <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm"><MapPin size={18} className="text-brand-magenta" /></div>
-                <span className="leading-relaxed">601, Pranav Orchid, Near Jatra Hotel, Adgaon, Nashik 422003</span>
+                <div className="flex flex-col gap-3 text-xs">
+                  <div>
+                    <span className="text-[9px] font-black uppercase text-brand-magenta tracking-widest block mb-1">Corporate Office</span>
+                    <span className="leading-relaxed">601, Pranav Orchid, Near Jatra Hotel, Adgaon, Nashik 422003</span>
+                  </div>
+                  <div>
+                    <span className="text-[9px] font-black uppercase text-brand-magenta tracking-widest block mb-1">Printing Unit</span>
+                    <span className="leading-relaxed">1-3, Shubham Heights, Soygaon Market, Satana Naka, Malegaon 423203</span>
+                  </div>
+                </div>
               </li>
               <li className="flex gap-5">
                 <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shrink-0 shadow-sm"><Phone size={18} className="text-brand-magenta" /></div>

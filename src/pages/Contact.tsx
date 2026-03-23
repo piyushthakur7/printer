@@ -42,7 +42,7 @@ const MapSection = () => {
         loading="lazy"
       />
       <div className="absolute top-12 left-12 bg-brand-black text-white p-10 rounded-3xl shadow-2xl hidden md:block">
-        <h4 className="font-black mb-2 uppercase tracking-tight">Main Facility</h4>
+        <h4 className="font-black mb-2 uppercase tracking-tight">Corporate Office</h4>
         <p className="text-xs text-gray-400">Adgaon, Nashik 422003</p>
       </div>
     </section>
@@ -68,8 +68,17 @@ const Contact = () => {
                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-brand-magenta group-hover:bg-brand-magenta group-hover:text-white transition-all">
                     <MapPin size={24} />
                   </div>
-                  <h4 className="font-black uppercase tracking-tight mb-3">Our Location</h4>
-                  <p className="text-sm text-gray-500 font-medium leading-relaxed">601, Pranav Orchid, Near Jatra Hotel, Adgaon, Nashik 422003</p>
+                  <h4 className="font-black uppercase tracking-tight mb-3">Our Locations</h4>
+                  <div className="space-y-4">
+                    <div>
+                      <span className="text-[10px] font-black uppercase text-brand-magenta tracking-widest block mb-1">Corporate Office</span>
+                      <p className="text-sm text-gray-500 font-medium leading-relaxed">601, Pranav Orchid, Near Jatra Hotel, Adgaon, Nashik 422003</p>
+                    </div>
+                    <div>
+                      <span className="text-[10px] font-black uppercase text-brand-magenta tracking-widest block mb-1">Printing Unit</span>
+                      <p className="text-sm text-gray-500 font-medium leading-relaxed">1-3, Shubham Heights, Soygaon Market, Satana Naka, Malegaon 423203</p>
+                    </div>
+                  </div>
                 </div>
                 <div className="bg-brand-gray/30 p-10 rounded-[2.5rem] border border-brand-gray group hover:border-brand-cyan transition-colors">
                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-brand-cyan group-hover:bg-brand-cyan group-hover:text-white transition-all">
