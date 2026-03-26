@@ -63,14 +63,14 @@ const QuoteCTA = () => {
 
 const Services = () => {
   const services = [
-    { title: "Hospital PP Files", icon: <Building2 />, color: "bg-brand-magenta", desc: "Specialized polypropylene storage solutions for medical records with durable multi-pocket designs." },
-    { title: "PP X-Ray / MRI Bags", icon: <Layers />, color: "bg-brand-cyan", desc: "High-strength, acid-free bags designed for long-term storage of oversized medical films." },
-    { title: "Hospital Stationery", icon: <Printer />, color: "bg-brand-yellow", desc: "Coordinated prescription pads, patient records, and administrative forms with clinical precision." },
-    { title: "Magazines & Books", icon: <Package />, color: "bg-brand-black", desc: "Premium saddle-stitch and perfect-bound publication printing for corporate and retail markets." },
-    { title: "Box Packaging", icon: <Package />, color: "bg-brand-magenta", desc: "Custom structural design and high-end printing for product containers and luxury retail boxes." },
-    { title: "Large Format Print", icon: <Globe />, color: "bg-brand-cyan", desc: "Visual branding at scale, covering banners, architectural wraps, and exhibition graphics." },
-    { title: "Promotional Merchandise", icon: <Award />, color: "bg-brand-yellow", desc: "Branded collateral that translates your identity onto physical touchpoints for lasting impact." },
-    { title: "Annual Reports", icon: <Layers />, color: "bg-brand-black", desc: "Sophisticated data presentation with specialized paper stocks and premium finishing options." },
+    { title: "Hospital PP Files", icon: <Building2 />, color: "bg-brand-magenta", desc: "Specialized non-tearable polypropylene storage solutions for patient records and lab reports." },
+    { title: "X-Ray / MRI Bags", icon: <Layers />, color: "bg-brand-cyan", desc: "Long-lasting, high-quality bags designed for medical film storage and easy handling." },
+    { title: "Hospital Stationery", icon: <Printer />, color: "bg-brand-yellow", desc: "Prescription pads, patient registration files, and coordinated pathology lab report papers." },
+    { title: "Books & Magazines", icon: <Package />, color: "bg-brand-black", desc: "High-volume publication printing for educational institutions, corporate sectors, and retail." },
+    { title: "Box Packaging", icon: <Package />, color: "bg-brand-magenta", desc: "Custom structural design and premium printing for industrial and retail product containers." },
+    { title: "Large Format Print", icon: <Globe />, color: "bg-brand-cyan", desc: "Impactful banners, architectural wraps, and exhibition graphics for maximum brand visibility." },
+    { title: "Brand Merchandise", icon: <Printer />, color: "bg-brand-yellow", desc: "Diverse promotional collateral and calendars that increase brand presence in physical spaces." },
+    { title: "Annual Reports", icon: <Layers />, color: "bg-brand-black", desc: "Sophisticated data presentation with specialized paper stocks and elegant finishing touches." },
   ];
 
   return (
@@ -104,8 +104,18 @@ const Services = () => {
               </motion.div>
             ))}
           </div>
+        <div className="mt-32 border-t border-brand-gray pt-20 text-center">
+          <span className="text-brand-magenta font-black tracking-[0.5em] uppercase text-[10px] mb-8 block">Industries We Serve</span>
+          <div className="flex flex-wrap justify-center gap-x-12 gap-y-6">
+            {["Hospitals", "Real Estate", "Food", "FMCG", "Manufacturing", "Fashion & Retail", "Jewellery", "Agriculture", "Education"].map((industry, i) => (
+              <span key={i} className="text-lg font-black uppercase tracking-widest text-brand-black/40 hover:text-brand-magenta transition-colors cursor-default">
+                {industry}
+              </span>
+            ))}
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
       <MaterialShowcase />
       <QuoteCTA />
     </>

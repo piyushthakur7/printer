@@ -92,7 +92,7 @@ const Contact = () => {
                     <Mail size={24} />
                   </div>
                   <h4 className="font-black uppercase tracking-tight mb-3">Email Address</h4>
-                  <p className="text-sm text-gray-500 font-medium leading-relaxed">info@modernoffset.com<br />sales@modernoffset.com</p>
+                  <p className="text-sm text-gray-500 font-medium leading-relaxed">girishmlg41@gmail.com<br />info@modernoffset.com</p>
                 </div>
                 <div className="bg-brand-gray/30 p-10 rounded-[2.5rem] border border-brand-gray group hover:border-[#25D366] transition-colors">
                   <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-all">

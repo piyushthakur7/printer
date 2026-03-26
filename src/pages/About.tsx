@@ -2,6 +2,45 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Award, Globe } from 'lucide-react';
 
+const PortfolioSection = () => {
+  const images = Array.from({ length: 12 }, (_, i) => `/images/portfolio/${i + 1}.jpg`);
+
+  return (
+    <section className="py-32 bg-brand-gray/50">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="text-center mb-20">
+          <span className="text-brand-magenta font-black tracking-[0.5em] uppercase text-[10px] mb-4 block">Our Work</span>
+          <h2 className="text-5xl font-black tracking-tighter mb-6 uppercase">PRINTING PORTFOLIO</h2>
+          <div className="w-24 h-1 bg-brand-magenta mx-auto" />
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {images.map((img, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: idx * 0.05 }}
+              viewport={{ once: true }}
+              className="group relative aspect-[3/4] overflow-hidden rounded-[2.5rem] shadow-lg border-4 border-white"
+            >
+              <img 
+                src={img} 
+                alt={`Portfolio ${idx + 1}`} 
+                className="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-110 group-hover:scale-100 transition-all duration-1000"
+              />
+              <div className="absolute inset-0 bg-brand-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-black scale-50 group-hover:scale-100 transition-transform duration-500">
+                  <Award size={20} />
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const ValuesSection = () => {
   const values = [
     { title: "Integrity", desc: "Honesty in every contract, transparency in every quote." },
@@ -107,7 +146,7 @@ const About = () => {
                 <span className="text-brand-magenta">FOR THE MODERN ERA</span>
               </h2>
               <p className="text-xl text-gray-500 mb-12 leading-relaxed font-medium">
-                Modern Offset is a budding state-of-the-art full service printing company. Our foundation is built on integrity, honesty, and an obsessive focus on detail.
+                Modern Offset is a budding state-of-the-art full service printing company that was established in 2001. We focus on the printing needs of educational institutions, the corporate sector, and the general public. Our foundation is built on integrity and honesty, with a singular commitment to delivering quality and detail that results in lasting business relationships.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-10">
@@ -116,14 +155,14 @@ const About = () => {
                     <Award size={32} className="text-brand-magenta group-hover:text-white" />
                   </div>
                   <h3 className="font-black text-xl mb-3 uppercase tracking-tight">Our Mission</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">Delivering excellence through responsiveness, diligence, and a culture of uncompromising quality.</p>
+                  <p className="text-sm text-gray-400 leading-relaxed">To provide the best printing services to our clientele by demonstrating responsiveness, diligence, judgments and building on our culture of excellence.</p>
                 </div>
                 <div className="group">
                   <div className="w-16 h-16 bg-brand-cyan/5 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-cyan group-hover:text-white transition-all duration-500">
                     <Globe size={32} className="text-brand-cyan group-hover:text-white" />
                   </div>
                   <h3 className="font-black text-xl mb-3 uppercase tracking-tight">Our Vision</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">To be the benchmark of quality in the printing industry, exceeding expectations in every partnership.</p>
+                  <p className="text-sm text-gray-400 leading-relaxed">Modern Offset strives to be the highest quality printing company in the country and exceeds the expectations of those we partner with by being the best printing service provider.</p>
                 </div>
               </div>
             </div>
@@ -131,6 +170,7 @@ const About = () => {
         </div>
       </section>
       <ValuesSection />
+      <PortfolioSection />
       <Infrastructure />
     </>
   );

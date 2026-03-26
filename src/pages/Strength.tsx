@@ -48,11 +48,11 @@ const QCSection = () => {
 
 const Strength = () => {
   const strengths = [
-    { title: "Quality Printing", desc: "Prints that leave a lasting impression with depth and vibrance.", icon: <CheckCircle2 /> },
-    { title: "Best Service", desc: "We believe that good service is the heart of good business.", icon: <Users /> },
-    { title: "Quick Delivery", desc: "Speed meets care in every logistical step we take.", icon: <Clock /> },
-    { title: "Perfect Packing", desc: "Protecting your products and elevating your brand presentation.", icon: <Package /> },
-    { title: "Reasonable Rates", desc: "Premium quality delivered at competitive, transparent prices.", icon: <Zap /> },
+    { title: "Quality Printing", desc: "Prints that leave a lasting impression.", icon: <CheckCircle2 /> },
+    { title: "Best Service", desc: "We believe that good service is good business.", icon: <Users /> },
+    { title: "Quick Delivery", desc: "Speed meets care in every delivery.", icon: <Clock /> },
+    { title: "Perfect Packing", desc: "Protecting your products, elevating your brand.", icon: <Package /> },
+    { title: "Reasonable Rates", desc: "You deserve best quality with affordable rates.", icon: <Zap /> },
   ];
 
   return (
