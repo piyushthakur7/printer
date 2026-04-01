@@ -178,7 +178,7 @@ const FeaturedServices = () => {
               className="bg-white rounded-[3rem] overflow-hidden shadow-xl border border-brand-gray group"
             >
               <div className="h-64 overflow-hidden">
-                <img src={item.img} alt={item.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" />
+                <img src={item.img} alt={item.title} loading="lazy" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-110 group-hover:scale-100" />
               </div>
               <div className="p-10">
                 <h3 className="font-black text-2xl mb-4 tracking-tight uppercase">{item.title}</h3>
@@ -206,7 +206,7 @@ const ProcessSection = () => {
         <div className="grid lg:grid-cols-2 gap-24 items-center">
           <div className="relative">
             <div className="absolute top-0 left-0 w-full h-full bg-brand-magenta/5 -z-10 rounded-[4rem] scale-110 blur-2xl" />
-            <img src="/images/prepress.png" alt="Prepress process" className="rounded-[4rem] shadow-2xl" />
+            <img src="/images/prepress.png" alt="Prepress process" loading="lazy" className="rounded-[4rem] shadow-2xl" />
           </div>
           <div>
             <span className="text-brand-magenta font-black tracking-[0.4em] uppercase text-[10px] mb-4 block">Our Process</span>

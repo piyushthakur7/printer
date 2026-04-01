@@ -26,6 +26,7 @@ const PortfolioSection = () => {
               <img 
                 src={img} 
                 alt={`Portfolio ${idx + 1}`} 
+                loading="lazy"
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 scale-110 group-hover:scale-100 transition-all duration-1000"
               />
               <div className="absolute inset-0 bg-brand-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
@@ -100,7 +101,7 @@ const Infrastructure = () => {
             </div>
           </div>
           <div className="relative">
-            <img src="/images/factory-floor.png" alt="Factory floor" className="rounded-[4rem] shadow-2xl" />
+            <img src="/images/factory-floor.png" alt="Factory floor" loading="lazy" className="rounded-[4rem] shadow-2xl" />
             <div className="absolute -bottom-10 -left-10 bg-brand-magenta text-white p-10 rounded-[3rem] shadow-2xl hidden md:block">
               <p className="text-4xl font-black mb-1">15k</p>
               <p className="text-[10px] uppercase font-black tracking-widest opacity-70">Square Feet Facility</p>

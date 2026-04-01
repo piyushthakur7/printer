@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { ChevronRight } from 'lucide-react';
@@ -8,12 +8,12 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 
-// Pages
-import Home from './pages/Home';
-import About from './pages/About';
-import Services from './pages/Services';
-import Strength from './pages/Strength';
-import Contact from './pages/Contact';
+// Pages lazy-loaded for performance
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Strength = lazy(() => import('./pages/Strength'));
+const Contact = lazy(() => import('./pages/Contact'));
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -26,6 +26,13 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Simple Fallback Loader for Suspense
+const PageLoader = () => (
+  <div className="min-h-[70vh] flex items-center justify-center">
+    <div className="w-16 h-16 border-4 border-brand-gray border-t-brand-magenta rounded-full animate-spin"></div>
+  </div>
+);
+
 export default function App() {
   return (
     <Router>
@@ -34,13 +41,15 @@ export default function App() {
         <Navbar />
         
         <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/strength" element={<Strength />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
+          <Suspense fallback={<PageLoader />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/strength" element={<Strength />} />
+              <Route path="/contact" element={<Contact />} />
+            </Routes>
+          </Suspense>
         </main>
 
         <Footer />
