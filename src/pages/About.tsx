@@ -147,7 +147,7 @@ const About = () => {
                 <span className="text-brand-magenta">FOR THE MODERN ERA</span>
               </h2>
               <p className="text-xl text-gray-500 mb-12 leading-relaxed font-medium">
-                Modern Offset is a budding state-of-the-art full service printing company that was established in 2001. We focus on the printing needs of educational institutions, the corporate sector, and the general public. Our foundation is built on integrity and honesty, with a singular commitment to delivering quality and detail that results in lasting business relationships.
+                Modern Offset is a budding state of the art full service printing company that was established in 2001. It is focused on the printing needs of educational institutions, the corporate sector and the general public. It is our intention to provide the best possible printing solutions where attention is given to quality and detail, resulting in satisfied clients with whom we have lasting business relationships. The foundation of our business is integrity and honesty. We take pride in the client relationships that have developed resulting in interdependency and mutual growth.
               </p>
               
               <div className="grid sm:grid-cols-2 gap-10">
@@ -163,7 +163,7 @@ const About = () => {
                     <Globe size={32} className="text-brand-cyan group-hover:text-white" />
                   </div>
                   <h3 className="font-black text-xl mb-3 uppercase tracking-tight">Our Vision</h3>
-                  <p className="text-sm text-gray-400 leading-relaxed">Modern Offset strives to be the highest quality printing company in the country and exceeds the expectations of those we partner with by being the best printing service provider.</p>
+                  <p className="text-sm text-gray-400 leading-relaxed">Modern Offset strives to be the highest quality printing company in the country and strives to exceed the expectations of those we partner with by, being the best printing service provider our clients have ever had, being the best company our employees have ever worked for and to continuously improve all aspects of our business while building on our culture of excellence.</p>
                 </div>
               </div>
             </div>

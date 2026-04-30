@@ -114,7 +114,7 @@ const Strength = () => {
                 className="absolute -bottom-12 -right-12 bg-brand-black text-white p-12 rounded-[3.5rem] z-20 max-w-sm shadow-2xl border border-white/10"
               >
                 <div className="text-brand-magenta mb-6"><Users size={40} /></div>
-                <p className="text-xl font-medium leading-relaxed mb-8 italic">"We look forward for a productive discussion to take your brand to the next level."</p>
+                <p className="text-xl font-medium leading-relaxed mb-8 italic">"We look forward for a productive discussion... If you are looking for quality work to take your brand to the next level, simply let us know. We will be more than happy to serve you."</p>
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-1 bg-brand-magenta" />
                   <p className="font-black uppercase tracking-widest text-xs">Modern Offset Team</p>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MapPin, Phone, MessageCircle, Globe, Mail } from 'lucide-react';
+import Logo from './Logo';
 import { WHATSAPP_LINK } from './WhatsAppButton';
 
 const Footer = () => {
@@ -9,17 +10,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-4 gap-20 mb-24">
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-10">
-              <div className="flex gap-0.5">
-                <div className="w-1.5 h-8 bg-brand-magenta rounded-full" />
-                <div className="w-1.5 h-8 bg-brand-cyan rounded-full" />
-                <div className="w-1.5 h-8 bg-brand-yellow rounded-full" />
-                <div className="w-1.5 h-8 bg-brand-black rounded-full" />
-              </div>
-              <div className="flex flex-col leading-none">
-                <span className="text-2xl font-black tracking-tighter uppercase">Modern Offset</span>
-                <span className="text-[9px] uppercase tracking-[0.3em] font-bold opacity-40">Lasting Impressions</span>
-              </div>
+            <div className="mb-10">
+              <Logo />
             </div>
             <p className="text-gray-500 max-w-md mb-12 text-lg font-medium leading-relaxed">
               Providing state-of-the-art full service printing solutions since 2001. We take pride in the client relationships that have developed resulting in interdependency and mutual growth.

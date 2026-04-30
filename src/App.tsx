@@ -14,6 +14,7 @@ const About = lazy(() => import('./pages/About'));
 const Services = lazy(() => import('./pages/Services'));
 const Strength = lazy(() => import('./pages/Strength'));
 const Contact = lazy(() => import('./pages/Contact'));
+const Portfolio = lazy(() => import('./pages/Portfolio'));
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -46,6 +47,7 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/strength" element={<Strength />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>

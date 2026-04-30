@@ -63,14 +63,23 @@ const QuoteCTA = () => {
 
 const Services = () => {
   const services = [
-    { title: "Hospital PP Files", icon: <Building2 />, color: "bg-brand-magenta", desc: "Specialized non-tearable polypropylene storage solutions for patient records and lab reports." },
-    { title: "X-Ray / MRI Bags", icon: <Layers />, color: "bg-brand-cyan", desc: "Long-lasting, high-quality bags designed for medical film storage and easy handling." },
-    { title: "Hospital Stationery", icon: <Printer />, color: "bg-brand-yellow", desc: "Prescription pads, patient registration files, and coordinated pathology lab report papers." },
-    { title: "Books & Magazines", icon: <Package />, color: "bg-brand-black", desc: "High-volume publication printing for educational institutions, corporate sectors, and retail." },
-    { title: "Box Packaging", icon: <Package />, color: "bg-brand-magenta", desc: "Custom structural design and premium printing for industrial and retail product containers." },
-    { title: "Large Format Print", icon: <Globe />, color: "bg-brand-cyan", desc: "Impactful banners, architectural wraps, and exhibition graphics for maximum brand visibility." },
-    { title: "Brand Merchandise", icon: <Printer />, color: "bg-brand-yellow", desc: "Diverse promotional collateral and calendars that increase brand presence in physical spaces." },
-    { title: "Annual Reports", icon: <Layers />, color: "bg-brand-black", desc: "Sophisticated data presentation with specialized paper stocks and elegant finishing touches." },
+    { title: "Hospital PP Files (Non Tearable)", icon: <Building2 />, color: "bg-brand-magenta", desc: "Specialized non-tearable polypropylene storage solutions for patient records and lab reports." },
+    { title: "PP X-Ray / MRI Bags", icon: <Layers />, color: "bg-brand-cyan", desc: "Long-lasting, high-quality bags designed for medical film storage and easy handling." },
+    { title: "Hospital Files", icon: <Building2 />, color: "bg-brand-yellow", desc: "Durable and organized file solutions tailored for healthcare institutions." },
+    { title: "Hospital Stationary", icon: <Printer />, color: "bg-brand-black", desc: "Prescription pads, patient registration files, and essential medical forms." },
+    { title: "Pathology Lab Report Paper", icon: <Printer />, color: "bg-brand-magenta", desc: "High-quality, standardized paper for clear and professional lab results." },
+    { title: "Stationery", icon: <Printer />, color: "bg-brand-cyan", desc: "Premium letterheads, envelopes, and complete corporate identity kits." },
+    { title: "Books", icon: <Package />, color: "bg-brand-yellow", desc: "High-volume publication printing with multiple binding options." },
+    { title: "Magazines", icon: <Package />, color: "bg-brand-black", desc: "Vibrant, high-resolution printing for glossy and matte magazine finishes." },
+    { title: "Publications", icon: <Package />, color: "bg-brand-magenta", desc: "Comprehensive printing for journals, periodicals, and academic publications." },
+    { title: "Flyers", icon: <Globe />, color: "bg-brand-cyan", desc: "Eye-catching promotional flyers for events, marketing, and local reach." },
+    { title: "Brochures", icon: <Globe />, color: "bg-brand-yellow", desc: "Multi-fold, high-quality brochures to elegantly showcase your offerings." },
+    { title: "Box Packaging", icon: <Package />, color: "bg-brand-black", desc: "Custom structural design and premium printing for industrial and retail products." },
+    { title: "Posters", icon: <Globe />, color: "bg-brand-magenta", desc: "Large, vibrant prints that command attention in any physical space." },
+    { title: "Large Format Print", icon: <Globe />, color: "bg-brand-cyan", desc: "Impactful banners, architectural wraps, and exhibition graphics." },
+    { title: "Promotional Merchandise", icon: <Printer />, color: "bg-brand-yellow", desc: "Diverse promotional collateral that increases brand presence." },
+    { title: "Calendars", icon: <Layers />, color: "bg-brand-black", desc: "Custom wall and desk calendars for year-round brand visibility." },
+    { title: "Annual Reports", icon: <Layers />, color: "bg-brand-magenta", desc: "Sophisticated data presentation with elegant finishing touches." },
   ];
 
   return (
@@ -81,26 +90,28 @@ const Services = () => {
             <div>
               <span className="text-brand-magenta font-black tracking-[0.4em] uppercase text-[10px] mb-4 block">Our Expertise</span>
               <h2 className="text-6xl font-black tracking-tighter">PREMIUM SERVICES</h2>
+              <h3 className="text-2xl font-black text-brand-cyan uppercase mt-2">EVERYTHING IN PRINTING</h3>
             </div>
             <p className="text-gray-400 max-w-md font-medium">From corporate assignments to specialized medical files, we deliver precision at scale.</p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {services.map((service, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: idx * 0.05 }}
+                transition={{ delay: (idx % 4) * 0.05 }}
                 whileHover={{ y: -15 }}
-                className="bg-white p-10 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)] transition-all duration-500 group border border-brand-gray"
+                viewport={{ once: true }}
+                className="bg-white p-8 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.03)] hover:shadow-[0_40px_80px_rgba(0,0,0,0.08)] transition-all duration-500 group border border-brand-gray flex flex-col"
               >
-                <div className={`w-16 h-16 ${service.color} rounded-2xl flex items-center justify-center text-white mb-8 group-hover:rotate-6 transition-transform shadow-lg`}>
-                  {React.cloneElement(service.icon as React.ReactElement, { size: 28 })}
+                <div className={`w-14 h-14 ${service.color} rounded-2xl flex items-center justify-center text-white mb-6 group-hover:rotate-6 transition-transform shadow-lg shrink-0`}>
+                  {React.cloneElement(service.icon as React.ReactElement, { size: 24 })}
                 </div>
-                <h3 className="font-black text-xl mb-4 tracking-tight uppercase">{service.title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed mb-6">{service.desc}</p>
-                <div className="w-8 h-1 bg-brand-gray group-hover:w-full group-hover:bg-brand-magenta transition-all duration-500" />
+                <h3 className="font-black text-lg mb-3 tracking-tight uppercase leading-tight">{service.title}</h3>
+                <p className="text-xs text-gray-400 leading-relaxed mb-6 flex-grow">{service.desc}</p>
+                <div className="w-8 h-1 bg-brand-gray group-hover:w-full group-hover:bg-brand-magenta transition-all duration-500 mt-auto" />
               </motion.div>
             ))}
           </div>
